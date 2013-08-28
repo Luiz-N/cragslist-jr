@@ -1,0 +1,17 @@
+<div class="container cf">
+  <div class ="hero"><h1>JohnathonsList!</h1>
+  <p>Here are some interesting categories found in Chicago just for you!</p>
+  </div>
+  <div id="lists" class="cf">
+    <ul id="left">
+      <% @categories[0].each do |category| %>
+      <li><a href="/category/<%= category[:id]%>"><%= category[:title] %></a></li>
+      <% end %>
+    </ul>
+    <ul id ="right">
+      <% @categories[1].each do |category| %>
+      <li><a href="/category/<%=category[:id]%>"><%=category[:title] %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

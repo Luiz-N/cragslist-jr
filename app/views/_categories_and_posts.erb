@@ -1,0 +1,19 @@
+<div class="container cf">
+  <div id ="hero"><h1><%= @category[:title] %></h1>
+  <p>Here are some interesting posts found in <%= @category[:title]%>!</p>
+  </div>
+  <div id="lists" class="cf">
+    <ul id="left">
+      <% @posts[0].each do |post| %>
+      <li><a href="/post/<%= post[:id]%>"><%= post[:title] %></a><span>$<%= post[:price] %><span></li>
+      <% end %>
+    </ul>
+    <ul id="right">
+      <% @posts[1].each do |post| %>
+      <li><a href="/post/<%= post[:id]%>"><%= post[:title] %></a><span>$<%= post[:price] %><span></li>
+      <% end %>
+    </ul>
+  </div>
+  <a class="addlink" href="/post/new/<%=@category[:id]%>">Add a post</a>
+</div>
+

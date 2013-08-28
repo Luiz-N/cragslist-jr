@@ -1,0 +1,25 @@
+<div class="container cf">
+  <h1 class="hero">Add a Post</h1>
+  <form class="cf" action="/posts" method="post">
+    <input type="hidden" name="post[category_id]" value="<%=params[:id]%>">
+    <div class ="row">
+      <label for="post_title">Post Title</label>
+      <input id="post_title" type="text" name="post[title]" placeholder="Chair">
+    </div>
+    <div class ="row">
+      <label for="description">Description</label>
+      <input id="description" type="text" name="post[description]" placeholder="For sitting!">
+    </div>
+    <div class ="row">
+      <label for="price">Price</label>
+      <input id="price" type="tel" name="post[price]" placeholder="1000000" >
+    </div>
+    <div class ="row">
+      <label for="email">Email</label>
+      <input id="email" type="email" name="post[email]" placeholder="bob@bob.com">
+    </div>
+    <div class ="row">
+      <input id="submit_button" type="Submit">
+    </div>
+  </form>
+</div>
